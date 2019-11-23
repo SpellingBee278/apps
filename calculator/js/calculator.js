@@ -70,7 +70,14 @@ window.addEventListener("load", event => {
     // To Add Numbers in the Screen
     function getNumbers(e) {
         var currentNumber = e.currentTarget;
-        input.innerHTML += currentNumber.innerHTML;
+
+        if (input.innerHTML === "0"){
+            input.innerHTML = currentNumber.innerHTML;
+        }
+        else {
+            input.innerHTML += currentNumber.innerHTML;
+        }
+
         var num = parseInt(currentNumber.innerHTML);
 
         result += num;
@@ -103,7 +110,7 @@ window.addEventListener("load", event => {
 
     // Delete All Numbers
     function deleteAll() {
-        input.innerHTML = "";
+        input.innerHTML = "0";
         secondInput.innerHTML = "";
         addAction.innerHTML = "";
         addAction.classList.remove('active-action');
@@ -112,7 +119,17 @@ window.addEventListener("load", event => {
 
     // Delete Last Number
     function deleteLast() {
-        input.innerHTML = input.innerHTML.slice(0, -1);
+
+        if (input.innerHTML !== "0") {
+
+            input.innerHTML = input.innerHTML.slice(0, -1);
+        }
+
+            if (input.innerHTML === "") {
+
+                input.innerHTML = "0";
+            }
+
 
     }
 
