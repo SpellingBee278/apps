@@ -1,0 +1,532 @@
+.about {
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    transition: all 0.2s ease;
+}
+.about .bg_links {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    backdrop-filter: blur(5px);
+    position: absolute;
+}
+.about .logo {
+    width: 40px;
+    height: 40px;
+    z-index: 9;
+    background-image: url(https://rafaelalucas91.github.io/assets/codepen/logo_white.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 10px 7px;
+    opacity: 0.9;
+    transition: all 1s 0.2s ease;
+    bottom: 0;
+    right: 0;
+}
+.about .social {
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+}
+.about .social .icon {
+    width: 100%;
+    height: 100%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    display: flex;
+    transition: all 0.2s ease, background-color 0.4s ease;
+    opacity: 0;
+    border-radius: 100%;
+}
+.about .social.portfolio {
+    transition: all 0.8s ease;
+}
+.about .social.portfolio .icon {
+    background-image: url(https://rafaelalucas91.github.io/assets/codepen/link.svg);
+}
+.about .social.dribbble {
+    transition: all 0.3s ease;
+}
+.about .social.dribbble .icon {
+    background-image: url(https://rafaelalucas91.github.io/assets/codepen/dribbble.svg);
+}
+.about .social.linkedin {
+    transition: all 0.8s ease;
+}
+.about .social.linkedin .icon {
+    background-image: url(https://rafaelalucas91.github.io/assets/codepen/linkedin.svg);
+}
+.about:hover {
+    width: 105px;
+    height: 105px;
+    transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .logo {
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+.about:hover .social {
+    opacity: 1;
+}
+.about:hover .social .icon {
+    opacity: 0.9;
+}
+.about:hover .social:hover {
+    background-size: 28px;
+}
+.about:hover .social:hover .icon {
+    background-size: 65%;
+    opacity: 1;
+}
+.about:hover .social.portfolio {
+    right: 0;
+    bottom: calc(100% - 40px);
+    transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.portfolio .icon:hover {
+    background-color: #698fb7;
+}
+.about:hover .social.dribbble {
+    bottom: 45%;
+    right: 45%;
+    transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.dribbble .icon:hover {
+    background-color: #ea4c89;
+}
+.about:hover .social.linkedin {
+    bottom: 0;
+    right: calc(100% - 40px);
+    transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.linkedin .icon:hover {
+    background-color: #0077b5;
+}
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
+:root {
+    --screen-bg: linear-gradient(90deg, #e5e4ea, #ced2d8);
+    --screen-fade: linear-gradient(
+            90deg,
+            #e5e4ea 30%,
+            rgba(228, 227, 233, 0) 60%
+    );
+    --calc-bg: #fff;
+    --numbers-bg: #e5e4ea;
+    --actions-bg: #b9d7d5;
+    --del-bg: #ced2d8;
+    --numbers-color: #4b8f8e;
+    --numbers-hover: #306064;
+    --actions-color: #606060;
+    --del-color: #606060;
+    --hover-keys: #72c0b0;
+    --arrow-back: url("https://rafaelalucas.com/dailyui/4/assets/arrow-light.svg");
+}
+
+[data-theme="dark"] {
+    --screen-bg: linear-gradient(90deg, #474747, #403e3e);
+    --screen-fade: linear-gradient(90deg, #474747 30%, rgba(71, 71, 71, 0) 60%);
+    --calc-bg: #606060;
+    --numbers-bg: #505050;
+    --actions-bg: #403e3e;
+    --del-bg: #474747;
+    --numbers-color: #72c0b0;
+    --numbers-hover: #e5e4ea;
+    --actions-color: #b9d7d5;
+    --del-color: #ced2d8;
+    --hover-keys: #222222;
+    --arrow-back: url("https://rafaelalucas.com/dailyui/4/assets/arrow-dark.svg");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+button,
+a,
+i,
+input {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus,
+p:focus,
+ul:focus,
+li:focus,
+button:focus,
+a:focus,
+i:focus,
+input:focus {
+    outline: 0;
+}
+
+div {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    font-family: "Barlow", sans-serif;
+    background: linear-gradient(120deg, #306064, #72c0b0);
+}
+
+.wrapper .container {
+    padding: 40px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media screen and (max-height: 500px) {
+    .wrapper .container {
+        height: 100%;
+    }
+}
+
+.wrapper .container .toggle-text {
+    position: absolute;
+    top: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 0.5;
+}
+
+.wrapper .container .toggle {
+    width: 60px;
+    height: 30px;
+    background: white;
+    border-radius: 30px;
+    position: absolute;
+    top: 60px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-box-shadow: inset 0px 0px 0px 3px rgba(96, 96, 96, 0.2),
+    0px 10px 20px 0px rgba(48, 96, 100, 0.5);
+    box-shadow: inset 0px 0px 0px 3px rgba(96, 96, 96, 0.2),
+    0px 10px 20px 0px rgba(48, 96, 100, 0.5);
+    cursor: pointer;
+}
+
+.wrapper .container .toggle:before {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: #ced2d8;
+    border-radius: 100%;
+    top: 4px;
+    left: 4px;
+    -webkit-transition: all 0.4s cubic-bezier(0.99, 0.01, 0.29, 1.24);
+    transition: all 0.4s cubic-bezier(0.99, 0.01, 0.29, 1.24);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-box-shadow: inset -2px 2px 10px 0px rgba(96, 96, 96, 0.3),
+    5px 0px 10px 0px rgba(96, 96, 96, 0.3);
+    box-shadow: inset -2px 2px 10px 0px rgba(96, 96, 96, 0.3),
+    5px 0px 10px 0px rgba(96, 96, 96, 0.3);
+}
+
+.wrapper .container .toggle:hover {
+    -webkit-box-shadow: inset 0px 0px 0px 3px rgba(96, 96, 96, 0.2),
+    0px 5px 10px 0px rgba(48, 96, 100, 0.5);
+    box-shadow: inset 0px 0px 0px 3px rgba(96, 96, 96, 0.2),
+    0px 5px 10px 0px rgba(48, 96, 100, 0.5);
+}
+
+.wrapper .container .toggle.off {
+    background: #403e3e;
+}
+
+.wrapper .container .toggle.off:before {
+    background: #72c0b0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-box-shadow: inset -2px 2px 8px 0px rgba(48, 96, 100, 0.7),
+    -5px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: inset -2px 2px 8px 0px rgba(48, 96, 100, 0.7),
+    -5px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .container .calculator {
+    width: 280px;
+    height: 400px;
+    background: var(--calc-bg);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 100px 1fr;
+    grid-template-rows: 100px 1fr;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-transform: perspective(150px);
+    transform: perspective(150px);
+    -webkit-box-shadow: 0px 20px 40px -20px rgba(48, 96, 100, 0.8),
+    10px 10px 0px 0px rgba(48, 96, 100, 0.2);
+    box-shadow: 0px 20px 40px -20px rgba(48, 96, 100, 0.8),
+    10px 10px 0px 0px rgba(48, 96, 100, 0.2);
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.wrapper .container .calculator:hover {
+    -webkit-box-shadow: 0px 10px 20px -20px rgba(48, 96, 100, 0.8),
+    0px 0px 0px 0px rgba(48, 96, 100, 0.2);
+    box-shadow: 0px 10px 20px -20px rgba(48, 96, 100, 0.8),
+    0px 0px 0px 0px rgba(48, 96, 100, 0.2);
+}
+
+.wrapper .container .calculator .screen {
+    background: var(--screen-bg);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.wrapper .container .calculator .screen .input,
+.wrapper .container .calculator .screen .second-input {
+    width: 280px;
+    height: 50%;
+    background-color: transparent;
+    border: 0;
+    text-align: right;
+    font-family: "Barlow", sans-serif;
+    font-size: 40px;
+    color: var(--numbers-color);
+    padding: 5px 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    bottom: 0;
+    position: absolute;
+}
+
+.wrapper .container .calculator .screen .input:before,
+.wrapper .container .calculator .screen .second-input:before {
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 100%;
+    background: var(--screen-fade);
+    left: 0;
+    top: 0;
+}
+
+.wrapper .container .calculator .screen .second-input {
+    font-size: 20px;
+    top: 5px;
+    height: 35%;
+}
+
+.wrapper .container .calculator .screen .get-action {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: none;
+    color: var(--numbers-color);
+    font-size: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.wrapper .container .calculator .screen .get-action.active-action {
+    display: block;
+    -webkit-animation: getAction 0.6s ease both;
+    animation: getAction 0.6s ease both;
+}
+
+@-webkit-keyframes getAction {
+    0% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+@keyframes getAction {
+    0% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+}
+
+.wrapper .container .calculator .keyboard {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[5];
+    grid-template-rows: repeat(5, 1fr);
+    border-radius: 0 0 2px 2px;
+}
+
+.wrapper .container .calculator .keyboard .key {
+    background-color: var(--numbers-bg);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 1px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: var(--numbers-color);
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    /* total key */
+    /* delete key */
+    /* back key */
+    /* + - x / */
+    /* bottom left key */
+    /* top right key */
+}
+
+.wrapper .container .calculator .keyboard .key:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--hover-keys);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.wrapper .container .calculator .keyboard .key.total {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+    background-image: linear-gradient(45deg, #4b8f8e, #72c0b0);
+    color: white;
+    border-radius: 0 0 3px 0;
+}
+
+.wrapper .container .calculator .keyboard .key.total:before {
+    background: #306064;
+}
+
+.wrapper .container .calculator .keyboard .key.total:hover {
+    color: white;
+}
+
+.wrapper .container .calculator .keyboard .key.del {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    background: var(--del-bg);
+    color: var(--del-color);
+    border-radius: 3px 0 0 0;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.wrapper .container .calculator .keyboard .key.back {
+    background: var(--del-bg);
+    background-image: var(--arrow-back);
+    background-size: 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapper .container .calculator .keyboard .key.action {
+    background-color: var(--actions-bg);
+    color: var(--actions-color);
+}
+
+.wrapper .container .calculator .keyboard .key.bl {
+    border-radius: 0 0 0 3px;
+}
+
+.wrapper .container .calculator .keyboard .key.tr {
+    border-radius: 0 3px 0 0;
+}
+
+.wrapper .container .calculator .keyboard .key:hover {
+    color: var(--numbers-hover);
+}
+
+.wrapper .container .calculator .keyboard .key:hover:before {
+    opacity: 0.3;
+}
+
+.wrapper .container .calculator.flip-in {
+    -webkit-transform: rotate3d(0, 10, 0, 90deg);
+    transform: rotate3d(0, 10, 0, 90deg);
+}
+
+.wrapper .container .calculator.flip-out {
+    -webkit-transform: rotate3d(0, 10, 0, 0deg);
+    transform: rotate3d(0, 10, 0, 0deg);
+}
+/*# sourceMappingURL=main.css.map */
