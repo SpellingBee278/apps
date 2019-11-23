@@ -502,6 +502,7 @@ body {
 .wrapper .container .calculator .keyboard .key.action {
     background-color: var(--actions-bg);
     color: var(--actions-color);
+    font-size: 20px;
 }
 
 .wrapper .container .calculator .keyboard .key.bl {

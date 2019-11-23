@@ -97,6 +97,7 @@ window.addEventListener("load", event => {
     // Get Total Result
     function getTotal() {
 
+
     }
 
 
