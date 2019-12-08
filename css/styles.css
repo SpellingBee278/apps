@@ -9,6 +9,7 @@ body {
     width: 160px;
 
     text-align: center; margin: 1em 0;
+    background: linear-gradient(120deg, #306064, #72c0b0);
 }
 img {
 
