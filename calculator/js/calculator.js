@@ -50,7 +50,11 @@ window.addEventListener("load", event => {
         action = document.querySelectorAll('.action'),
         addAction = document.querySelector('.get-action'),
         total = document.querySelector('.total'),
-        result = "";
+        result = "",
+        runningTotal = 0,
+        numbersPressed = [],
+        actionsSelected = [];
+
 
     // Events
     number.forEach(function (el) {
@@ -82,7 +86,7 @@ window.addEventListener("load", event => {
 
         result += num;
 
-        console.log(result);
+        //alert(result);
     }
 
 
@@ -98,12 +102,26 @@ window.addEventListener("load", event => {
 
         secondInput.innerHTML += input.innerHTML + addAction.innerHTML;
         input.innerHTML = "";
+        var num = parseInt(result);
+        numbersPressed.push(num);
+        actionsSelected.push(currentAction.innerHTML);
+        result = "";
+        console.log(numbersPressed);
+        console.log(actionsSelected);
+
+
     }
 
 
     // Get Total Result
     function getTotal() {
+        var num = parseInt(result);
 
+        numbersPressed.push(num);
+        console.log(numbersPressed);
+        console.log(actionsSelected);
+
+        var totalResult = 0;
 
     }
 
