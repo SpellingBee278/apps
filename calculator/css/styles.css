@@ -18,7 +18,6 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(8, 150, 100, 20.15);
-    border-radius: 100%;
     backdrop-filter: blur(5px);
     position: absolute;
 }
@@ -116,7 +115,6 @@
 .about:hover .social.linkedin .icon:hover {
     background-color: #0077b5;
 }
-@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
 :root {
     --screen-bg: linear-gradient(90deg, #e5e4ea, #ced2d8);
     --screen-fade: linear-gradient(
@@ -171,6 +169,8 @@ input {
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
     color: inherit;
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
+
 }
 
 h1:focus,
@@ -242,10 +242,10 @@ body {
     top: 60px;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    -webkit-box-shadow: inset 0px 0px 0px 3px rgba(96, 96, 96, 0.2),
-    0px 10px 20px 0px rgba(48, 96, 100, 0.5);
-    box-shadow: inset 0px 0px 0px 3px rgba(96, 96, 96, 0.2),
-    0px 10px 20px 0px rgba(48, 96, 100, 0.5);
+    -webkit-box-shadow: inset 1px 1px 1px 3px rgba(96, 96, 96, 0.2),
+    1px 10px 20px 1px rgba(48, 96, 100, 0.5);
+    box-shadow: inset 1px 1px 1px 3px rgba(96, 96, 96, 0.2),
+    1px 10px 20px 1px rgba(48, 96, 100, 0.5);
     cursor: pointer;
 }
 
@@ -269,10 +269,10 @@ body {
 }
 
 .wrapper .container .toggle:hover {
-    -webkit-box-shadow: inset 0px 0px 0px 3px rgba(96, 96, 96, 0.2),
-    0px 5px 10px 0px rgba(48, 96, 100, 0.5);
-    box-shadow: inset 0px 0px 0px 3px rgba(96, 96, 96, 0.2),
-    0px 5px 10px 0px rgba(48, 96, 100, 0.5);
+    -webkit-box-shadow: inset 1px 1px 1px 3px rgba(96, 96, 96, 0.2),
+    1px 5px 10px 1px rgba(48, 96, 100, 0.5);
+    box-shadow: inset 1px 1px 1px 3px rgba(96, 96, 96, 0.2),
+    1px 5px 10px 1px rgba(48, 96, 100, 0.5);
 }
 
 .wrapper .container .toggle.off {
@@ -284,9 +284,9 @@ body {
     -webkit-transform: translateX(30px);
     transform: translateX(30px);
     -webkit-box-shadow: inset -2px 2px 8px 0px rgba(48, 96, 100, 0.7),
-    -5px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    -5px 1px 10px 1px rgba(0, 0, 0, 0.4);
     box-shadow: inset -2px 2px 8px 0px rgba(48, 96, 100, 0.7),
-    -5px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    -5px 1px 10px 1px rgba(0, 0, 0, 0.4);
 }
 
 .wrapper .container .calculator {
@@ -310,7 +310,7 @@ body {
     box-shadow: 0px 20px 40px -20px rgba(48, 96, 100, 0.8),
     10px 10px 0px 0px rgba(48, 96, 100, 0.2);
     position: relative;
-    transition: all 0.2s ease;
+
 }
 
 .wrapper .container .calculator:hover {
