@@ -59,11 +59,11 @@ window.addEventListener("load", event => {
     // Events
     number.forEach(function (el) {
         el.addEventListener('click', getNumbers);
-    })
+    });
 
     action.forEach(function (el) {
         el.addEventListener('click', getAction);
-    })
+    });
 
     del.addEventListener('click', deleteAll);
     back.addEventListener('click', deleteLast);

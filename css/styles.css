@@ -1,15 +1,17 @@
 body {
     margin: 0;
-    padding: 0;
-    height: auto;
-    font-family: "Barlow", sans-serif;}
+    padding: 15px;
+    height: 1002px;
+    font-family: "Barlow", sans-serif;
+    background: linear-gradient(120deg, #306064, #72c0b0);
+}
 .frame {
     height: 25px;      /* equals max image height */
     line-height: 25px;
     width: 160px;
 
     text-align: center; margin: 1em 0;
-    background: linear-gradient(120deg, #306064, #72c0b0);
+    background: linear-gradient(85deg, #306064, #72c0b0);
 }
 img {
 
