@@ -83,7 +83,7 @@ window.addEventListener("load", event => {
         }
 
         var num = parseInt(currentNumber.innerHTML);
-
+        numbersPressed.push(num);
         result += num;
 
         //alert(result);
@@ -91,32 +91,42 @@ window.addEventListener("load", event => {
 
 
     function getAction(e) {
-        var currentAction = e.currentTarget;
+        let currentAction = e.currentTarget;
         addAction.innerHTML = currentAction.innerHTML;
-
         addAction.classList.add('active-action');
+        if (numbersPressed.length > 1) {
+            doCalculation(numbersPressed, actionsSelected)
 
+        }
         setTimeout(() => {
             addAction.classList.remove('active-action');
         }, 200);
 
         secondInput.innerHTML += input.innerHTML + addAction.innerHTML;
         input.innerHTML = "";
-        var num = parseInt(result);
-        numbersPressed.push(num);
+
+        let num = parseInt(result);
+      //  numbersPressed.push(num);
         actionsSelected.push(currentAction.innerHTML);
         result = "";
         console.log(numbersPressed);
         console.log(actionsSelected);
 
 
-    }
 
+
+    }
+    function doCalculation(numbersPressed, actionsSelected) {
+        for (let i = 0; i < numbersPressed.length; i++) {
+            alert(numbersPressed[i]);
+
+        }
+
+    }
 
     // Get Total Result
     function getTotal() {
         var num = parseInt(result);
-
         numbersPressed.push(num);
         console.log(numbersPressed);
         console.log(actionsSelected);
@@ -149,7 +159,10 @@ window.addEventListener("load", event => {
             }
 
 
-    }
+    };
+        // Addition
+
+
 
 });
 
